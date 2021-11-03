@@ -20,7 +20,7 @@ public class Command_TIMESTAMP extends Command {
 
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
    		LocalDateTime now = LocalDateTime.now();  
-   		String str = dtf.format(now)  
+   		String str = dtf.format(now);  
 		WisenSimulation.simLog.add("S" + sensor.getId() + " GET TIMESTAMP.");
 		sensor.getScript().addVariable(arg, str);
 		return 0;
